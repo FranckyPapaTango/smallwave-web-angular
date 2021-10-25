@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,27 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.scss",
+
+              "src/assets/bootstrap/css/bootstrap.min.css",
+              "src/assets/bootstrap/css/bootstrap-grid.min.css",
+              "src/assets/bootstrap/css/bootstrap-reboot.min.css",
+              "src/assets/web/assets/mobirise-icons/mobirise-icons.css",
+              "src/assets/socicon/css/styles.css",
+              "src/assets/dropdown/css/style.css",
+              "src/assets/tether/tether.min.css",
+              "src/assets/theme/css/style.css",
+              "src/assets/mobirise_index/css/mbr-additional.css",
+              "src/assets/common.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              //"src/assets/js/helloTest.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -99,9 +120,14 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
           }
         }
       }

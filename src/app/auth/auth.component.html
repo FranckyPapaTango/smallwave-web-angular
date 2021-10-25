@@ -1,0 +1,11 @@
+<div class="bloc1">
+<h2>AUTHENTIFICATION / CONNEXION</h2>
+<button class="btn btn-success"
+        *ngIf="!authStatus"
+        (click)="onSignIn()">Connexion</button>
+
+<button class="btn btn-danger"
+        *ngIf="authStatus"
+        (click)="onSignOut()">Déconnexion</button>
+
+</div>

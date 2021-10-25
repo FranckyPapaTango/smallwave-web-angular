@@ -1,0 +1,40 @@
+<!--<app-message-modal *ngIf="displayMessageModal" [messageModal]="messageModal"></app-message-modal>
+
+<div class="div-add-typecommande">
+	<fieldset>
+        <legend><b>{{titleSaveOrUpdate}}</b></legend>
+		  <form #addTypecommandeForm="ngForm" (ngSubmit)="saveOrUpdateTypecommande(addTypecommandeForm)">
+			 <span><label for="Libelletype" class="typecommande-label">Libelletype</label><input name="libelletype" class="typecommande-input" type="text" required [(ngModel)]="typecommande.libelletype"></span>
+	 
+                  <span class="span-typecommande-submit"></span>
+		  </form>
+		  <button class="clear-form-button" (click)="clearForm(addTypecommandeForm)">Clear Form</button>
+	</fieldset>
+</div>
+<div class="div-search-typecommande"> 
+	<fieldset class="fieldset-search-typecommande">
+        <legend><b>Search Typecommandes Form</b></legend>
+		  <form #searchTypecommandeForm="ngForm" (ngSubmit)="searchTypecommandesByType(searchTypecommandeForm)">
+		  	 <label for="Search By" class="search-label">Search By:</label><select class="search-select" name="type" required [(ngModel)]="displayType"><option *ngFor="let type of types" [value]="type">{{type}}</option></select>
+			 <ng-container *ngIf="displayType==='libelletype'"><label for="Libelletype" class="search-label">Libelletype:</label><input name="libelletype" class="search-input" type="text" required [(ngModel)]=libelletype></ng-container>
+			 <input value="Search" class="search-submit-button" type=submit [disabled]="!searchTypecommandeForm.form.valid"/>
+		  </form>
+		  <br/><br/>
+		  <ng-container *ngIf="isNoResult && isFormSubmitted"><span class="span-no-result">No Result</span></ng-container>
+		  <ng-container *ngIf="!isNoResult && isFormSubmitted">
+		     <table>
+		        <tr><th *ngFor="let head of headsTab">{{head}}</th><th></th><th></th></tr>
+		        <tr class="{{typecommande.id_typecommande}}" *ngFor="let typecommande of searchTypecommandesResult">
+		          <td>{{typecommande.libelletype}}</td>
+                         
+                          
+		          <td>{{typecommande.updated_version_date | date:'dd/MM/yyyy'}}</td>
+		          <td>{{typecommande.date_persistence | date:'dd/MM/yyyy'}}</td>
+                          
+		          <td><button value="Update" class="button-update-typecommande" (click)=setUpdateTypecommande(typecommande)>Update</button></td><td><button value="Delete" class="button-delete-typecommande" (click)=deleteTypecommande(typecommande)>Delete</button></td>
+		        </tr>
+		     </table>
+		  </ng-container>
+	</fieldset>
+</div>
+<app-back-to-menu></app-back-to-menu>-->

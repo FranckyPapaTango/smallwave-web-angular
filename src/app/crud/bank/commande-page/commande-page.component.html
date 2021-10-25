@@ -1,0 +1,70 @@
+<!--<app-message-modal *ngIf="displayMessageModal" [messageModal]="messageModal"></app-message-modal>
+
+<div class="div-add-commande">
+	<fieldset>
+        <legend><b>{{titleSaveOrUpdate}}</b></legend>
+		  <form #addCommandeForm="ngForm" (ngSubmit)="saveOrUpdateCommande(addCommandeForm)">
+			 <span><label for="Civilite" class="commande-label">Civilite:</label><input name="civilite" class="commande-input" type="text" required [(ngModel)]="commande.civilite"></span>
+			 <span><label for="Nom" class="commande-label">Nom:</label><input name="nom" class="commande-input" type="text" required [(ngModel)]="commande.nom"></span>
+			 <span><label for="Prenom" class="commande-label">Prenom:</label><input name="prenom" class="commande-input" type="text" required [(ngModel)]="commande.prenom"></span>
+			 <span><label for="Phone" class="commande-label">Phone:</label><input name="phone" class="commande-input" type="text" required [(ngModel)]="commande.phone"></span>
+			 <span><label for="Pays" class="commande-label">Pays:</label><input name="pays" class="commande-input" type="text" required [(ngModel)]="commande.pays"></span>
+			 <span><label for="Email" class="commande-label">Email:</label><input name="email" class="commande-input" type="text" required [(ngModel)]="commande.email"></span>
+			 <span><label for="Instant_messenger" class="commande-label">Instant_messenger:</label><input name="instant_messenger" class="commande-input" type="text" required [(ngModel)]="commande.instant_messenger"></span>
+			 <span><label for="Path_dle" class="commande-label">Path_dle:</label><input name="path_dle" class="commande-input" type="text" required [(ngModel)]="commande.path_dle"></span>
+			 
+                         <span><label for="Nom_produit" class="commande-label">Nom_produit:</label><input name="nom_produit" class="commande-input" type="text" required [(ngModel)]="commande.nom_produit"></span>
+			 <span><label for="Budget" class="commande-label">Budget:</label><input name="budget" class="commande-input" type="text" required [(ngModel)]="commande.budget"></span> 
+                         <span><label for="deadline" class="commande-label">deadline:</label><input name="deadline" class="commande-input" type="text" required [(ngModel)]="commande.deadline"></span>
+			 <span><label for="Description_produit" class="commande-label">Description_produit</label><input name="description_produit" class="commande-input" type="text" required [(ngModel)]="commande.description_produit"></span>
+			
+                         <span><label for="Release Date" class="commande-label">Release Date:</label><input name="release-date" class="commande-input" [matDatepicker]="myDatepicker" required [(ngModel)]="commande.releaseDate" placeholder="DD/MM/YYYY"><mat-datepicker-toggle matSuffix [for] = "myDatepicker" placeholder="mm/dd/yyyy"></mat-datepicker-toggle><mat-datepicker #myDatepicker></mat-datepicker></span>
+			 
+                         <span><label for="Typecommande" class="commande-label">Type de commande</label><select class="commande-select" name="typecommande" required [(ngModel)]="commande.typecommande.libelletype"><option *ngFor="let typ of typecommandes" [value]="typ.libelletype">{{typ.libelletype}}</option></select> <input [value]="actionButton" class="commande-submit-button" type=submit [disabled]="!addCommandeForm.form.valid"/></span>
+			 <span class="span-commande-submit"></span>
+		  </form>
+		  <button class="clear-form-button" (click)="clearForm(addCommandeForm)">Clear Form</button>
+	</fieldset>
+</div>
+<div class="div-search-commande"> 
+	<fieldset class="fieldset-search-commande">
+        <legend><b>Search Commandes Form</b></legend>
+		  <form #searchCommandeForm="ngForm" (ngSubmit)="searchCommandesByType(searchCommandeForm)">
+		  	 <label for="Search By" class="search-label">Search By:</label><select class="search-select" name="type" required [(ngModel)]="displayType"><option *ngFor="let type of types" [value]="type">{{type}}</option></select>
+			 <ng-container *ngIf="displayType==='Civilite'"><label for="Civilite" class="search-label">Civilite:</label><input name="civilite" class="search-input" type="text" required [(ngModel)]=civilite></ng-container>
+			 <ng-container *ngIf="displayType==='Nom'"><label for="Nom" class="search-label">Nom:</label><input name="nom" class="search-input" type="text" required [(ngModel)]=nom></ng-container>
+			 <input value="Search" class="search-submit-button" type=submit [disabled]="!searchCommandeForm.form.valid"/>
+		  </form>
+		  <br/><br/>
+		  <ng-container *ngIf="isNoResult && isFormSubmitted"><span class="span-no-result">No Result</span></ng-container>
+		  <ng-container *ngIf="!isNoResult && isFormSubmitted">
+		     <table>
+		        <tr><th *ngFor="let head of headsTab">{{head}}</th><th></th><th></th></tr>
+		        <tr class="{{commande.id_commande}}" *ngFor="let commande of searchCommandesResult">
+		          <td>{{commande.civilite}}</td>
+		          <td>{{commande.nom}}</td>
+		          <td>{{commande.prenom}}</td>
+                          <td>{{commande.phone}}</td>
+                          <td>{{commande.pays}}</td>
+                          <td>{{commande.email}}</td>
+                          <td>{{commande.instant_messenger}}</td>
+                          <td>{{commande.path_dle}}</td>
+                          <td>{{commande.nom_produit}}</td>
+                          <td>{{commande.budget}}</td>
+                          <td>{{commande.deadline}}</td>
+                          <td>{{commande.description_produit}}</td>
+                         
+                          
+		          <td>{{typecommande.updated_version_date | date:'dd/MM/yyyy'}}</td>
+		          <td>{{typecommande.date_persistence | date:'dd/MM/yyyy'}}</td>
+
+                          
+		          <td>{{commande.typecommande.libelletype}}</td>
+		          <td><button value="Update" class="button-update-commande" (click)=setUpdateCommande(commande)>Update</button></td><td><button value="Delete" class="button-delete-commande" (click)=deleteCommande(commande)>Delete</button></td>
+		        </tr>
+		     </table>
+		  </ng-container>
+	</fieldset>
+</div>
+
+<app-back-to-menu></app-back-to-menu>-->

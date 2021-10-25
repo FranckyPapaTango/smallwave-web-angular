@@ -1,0 +1,296 @@
+<body style=" background-color: #6E6E6E;">
+
+
+
+  <br><br> <br>
+          
+          
+                   <div id="example" style="padding-top: 0%;"><marquee   behavior="scroll" direction="left"
+                                     scrollamount="20" scrolldelay="100" onmouseover="this.stop();"
+                                     onmouseout="this.start();"  bgcolor="white">
+
+                <div id="textdef" >                                
+                    ACCOMPAGNEMENT DANS VOTRE TRANSFORMATION DIGITALE : ELABORATION DE VOTRE LOGICIEL DE GESTION DE VOTRE ACTIVITE 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    (ERP, CMS, CRUD ADMINISTRATION...)
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    CONCEPTION ET DEVELOPPEMENT DE LOGICIELS JAVA, D'APPLICATIONS WEB JAVA EE A ARCHITECTURE DISTRIBUEE, D'APPLICATIONS MOBILE ANDROÏD 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    (SOFTWARES, JEUX, SITES WEB PERSONNELS OU PROFESSIONNELS : E-COMMERCE, E-LEARNING, UBERISATION)
+                </div>
+                </marquee></div>
+
+
+
+<section class="features15 cid-s2PMN2bWMI " id="features15-3" style="padding-top:0%; padding-bottom:0%">
+    
+    <div class="container">
+        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">VOUS DESIREZ FAIRE FABRIQUER VOTRE LOGICIEL OU VOTRE APPLICATION WEB ?&nbsp;</h2>
+        <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style">
+            Cliquez les images ci-dessous pour connaître les 3 étapes de la procédure.
+        </h3>
+
+        <div class="media-container-row container pt-5 mt-2">
+
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/background1.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title display-5 py-2 mbr-fonts-style">1° - remplissez le formulaire ci-bas</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Précisez le type d'Application, renseignez votre budget approximatif, joignez les schémas et maquettes explicatifs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/software-417880_960_720.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">2° - Validez (Envoyer) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Vérifiez que tous les champs sont bien renseignés et que toutes les données sont correctes, puis validez (envoyer).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/background3.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">3° - Réponse (Devis)</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Dès la reception de votre commande nous étudierons votre projet et établirons un devis que nous enverrons à votre adresse email - sous le délai nécessaire et suffisant.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            
+        </div>
+</div></section>
+
+
+
+
+
+
+<!--
+    <div class="container">
+
+    <div  style="background-color: #CCC; text-align: center">
+
+			<div class="row justify-content-center">
+				<div class="title col-12 col-lg-8">
+					<h2
+						class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+						${consigne}
+                                        </h2>
+					<h3
+						class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5"
+						style="color: #67b168">
+                                            ${message}
+                                        </h3>
+				</div>
+			</div>
+        </div>
+        </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="media-container-column col-lg-7" data-form-type="formoid">
+
+			<form:form method="POST" modelAttribute="commande" class="form-horizontal ">
+                    <table>
+
+
+                        <div class="form-group">
+                    <label class="control-label col-sm-6" for="idTypecommande">Catégorie</label>
+                    <div class="col-sm-60 selectContainer">
+                        <div class="input-group"> 
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-list"></i>
+                            </span>
+                            <form:select path="idTypecommande"  class="form-control selectpicker" id="idTypecommande" >
+
+                                <c:forEach items="${listidTypecommande}" var="idTypecommande_instance">
+                                    <form:option value="${idTypecommande_instance.idTypecommande}" style="padding-left: 20%;" >${idTypecommande_instance.libelletype}</form:option>                      
+                                </c:forEach>
+                            </form:select>
+                        </div>
+                        <div class=form-control" style="text-align: center;">
+                            <form:errors htmlEscape="false" path="idTypecommande" cssClass="error"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="control-label col-sm-6" for="civilite">Civilite:</label> 
+                    <div class="col-sm-60">
+                           <fieldset style="background-color: #819EAB; text-align: left; color: #F4FA58;">
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                         <form:radiobutton path="civilite" value="Mr"  />Mr &nbsp;&nbsp;&nbsp; 
+                            <form:radiobutton path="civilite" value="Mme" />Mme &nbsp;&nbsp;&nbsp;
+                            <form:radiobutton path="civilite" value="Mlle" />Mlle &nbsp;&nbsp;&nbsp;
+                            <form:radiobutton path="civilite" value="Association-Organisme" />Association-Organisme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <form:radiobutton path="civilite" value="Micro Entreprise" checked="checked" />Micro Entreprise &nbsp;&nbsp;&nbsp;
+                            <form:radiobutton path="civilite" value="Société" />Société
+                            <br><br>
+                        </fieldset>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="civilite" cssClass="error"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="pays">Pays:</label> 
+                    <div class="col-sm-60">
+                        <form:select path="pays"  class="form-control selectpicker" id="pays" >
+                            <form:option value="USA" style="padding-left: 20%;">USA</form:option>
+                            <form:option value="GREAT BRITAIN" style="padding-left: 20%;">GREAT BRITAIN</form:option>
+                            <form:option value="INDIA" style="padding-left: 20%;">INDIA</form:option>
+                            <form:option value="JAPAN" style="padding-left: 20%;">JAPAN</form:option>
+                            <form:option value="MADAGASCAR" style="padding-left: 20%;">MADAGASCAR</form:option>
+                            <form:option value="CANADA" style="padding-left: 20%;">CANADA</form:option>
+                            <form:option value="ESPAGNE" style="padding-left: 20%;">ESPAGNE</form:option>
+                            <form:option value="SUISSE" style="padding-left: 20%;">SUISSE</form:option>
+                            <form:option value="FRANCE" style="padding-left: 20%;">FRANCE</form:option>
+                            <form:option value="GERMANY" style="padding-left: 20%;">GERMANY</form:option>            
+                            <form:option value="ITALY" style="padding-left: 20%;">ITALY</form:option>
+                            <form:option value="BRASIL" style="padding-left: 20%;">BRASIL</form:option>
+                            <form:option value="BELGIUM" style="padding-left: 20%;">BELGIUM</form:option>
+                        </form:select>
+
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="pays" cssClass="error"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="nom">Nom (ou RAISON SOCIALE):</label> 
+                    <div class="col-sm-60"><form:input path="nom" class="form-control" id="nom" placeholder="Enter nom" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="nom" cssClass="error"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="prenom">Prénom (ou N° SIREN/SIRET):</label> 
+                    <div class="col-sm-60"><form:input path="prenom" class="form-control" id="prenom" placeholder="Enter prenom" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="prenom" cssClass="error"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="nomProduit">Nom du Produit:</label> 
+                    <div class="col-sm-60"><form:input path="nomProduit" class="form-control" id="nomProduit" placeholder="Enter nomProduit" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="nomProduit" cssClass="error"/>
+                    </div></div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="descriptionProduit">Description du Produit:</label> 
+                    <div class="col-sm-60">
+                    <form:textarea rows="5" cols="30" path="descriptionProduit" class="form-control" id="descriptionProduit" placeholder="Enter descriptionProduit" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="descriptionProduit" cssClass="error"/>
+                    </div></div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="phone">Téléphone:</label> 
+                    <div class="col-sm-60"><form:input path="phone" class="form-control" id="phone" placeholder="Enter phone" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="phone" cssClass="error"/>
+                    </div></div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="instantMessenger">Instant Messenger:</label> 
+                    <div class="col-sm-60"><form:input path="instantMessenger" class="form-control" id="instantMessenger" placeholder="Enter instantMessenger" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="instantMessenger" cssClass="error"/>
+                    </div></div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="email">Email:</label> 
+                    <div class="col-sm-60"><form:input path="email" class="form-control" id="email" placeholder="Enter email" required="true"/>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="email" cssClass="error"/>
+                    </div></div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="deadline">Délais/Deadline:</label> 
+                    <div class="col-sm-60">
+                        <form:select path="deadline" class="form-control selectpicker" id="deadline">                                
+                            <form:option value="7 jours" style="padding-left: 20%;">7 jours</form:option>
+                            <form:option value="15 jours" style="padding-left: 20%;">15 jours</form:option>
+                            <form:option value="2 semaines" style="padding-left: 20%;">2 semaines</form:option>
+                            <form:option value="3 semaines" style="padding-left: 20%;">3 semaines</form:option>
+                            <form:option value="1 mois" style="padding-left: 20%;">1 mois</form:option>
+                            <form:option value="2 mois" style="padding-left: 20%;">2 mois</form:option>
+                            <form:option value="3 mois" style="padding-left: 20%;">3 mois</form:option>
+                            <form:option value="4 mois" style="padding-left: 20%;">4 mois</form:option>
+                            <form:option value="5 mois" style="padding-left: 20%;">5 mois</form:option>
+                            <form:option value="6 mois" style="padding-left: 20%;">6 mois</form:option>
+                            <form:option value="7 mois ou plus" style="padding-left: 20%;">7 mois ou plus</form:option>
+                        </form:select>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="deadline" cssClass="error"/>
+                    </div></div>
+                <div class="form-group">
+                    <label class="control-label col-sm-6" for="budget">Quel est votre investissement ?</label> 
+                    <div class="col-sm-60">                                         
+                        <select name="color" name="budget" size="5">
+                        <form:select path="budget" name="budget" class="form-control selectpicker" id="budget">
+                            <option value="140 euros" style="padding-left: 20%;">140 euros</option>
+                            <option value="180 euros" style="padding-left: 20%;">180 euros</option>
+                            <option value="250 euros" style="padding-left: 20%;">250 euros</option>
+                            <option value="500 euros" style="padding-left: 20%;">500 euros</option>
+                            <option value="750 euros" style="padding-left: 20%;">750 euros</option>
+                            <option value="1000 euros" style="padding-left: 20%;">1000 euros</option>
+                            <option value="2500 euros" style="padding-left: 20%;">2500 euros</option>
+                            <option value="5000 euros" style="padding-left: 20%;">5000 euros</option>
+                            <option value="10.000 euros" style="padding-left: 20%;">10.000 euros</option>
+                            <option value="15.000 euros" style="padding-left: 20%;">15.000 euros</option>
+                            <option value="20.000 euros ou plus" style="padding-left: 20%;">20.000 euros ou plus</option>
+                        </form:select>
+                    </div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="budget" cssClass="error"/>
+                    </div></div>
+
+
+                <div class="form-group col-sm-12">
+                    <label class='control-label'>Si nécessaire n'hésitez pas à joindre votre logo, vos bannières, vos schémas scannés et tout autre document explicatif
+                        (formats acceptés : pdf,txt,docx,rtf,jpg/bmp/png/gif...).<br> Si vos documents sont nombreux il est judicieux de les
+                        rassembler dans un unique fichier Word .docx:</label>
+
+                        <div style="width:100%;"><div class="col-sm-60" style="margin-top: 2%;">
+                            <form:input  path="pathDle" class="form-control" type="file" name="file" id="file" accept="image/*" placeholder="Enter File to upload"/></div></div>
+                    <div  class=form-control" style="text-align: center;">
+                        <form:errors htmlEscape="false" path="pathDle" cssClass="error"/>
+                    </div></div>                    
+                <label class="control-label col-sm-3"></label>
+                        <div class="col-md-12 input-group-btn align-center">
+                            <button type="submit" class="btn btn-primary btn-form display-4">ENVOYER FORM</button>
+                        </div>
+            </table>
+        </form:form>
+    </div>
+  </div>
+</div>        
+ <br><br>       -->
+  
+<app-footer></app-footer>
+</body>

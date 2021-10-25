@@ -1,0 +1,71 @@
+<!--html-->
+<!--<header class="navbar" [ngClass]="{'navbar-fixed': isFixedNavbar}">
+  <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">
+    <div class="navbar-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+      <div class="navbar-logo">
+        <a routerLink="/">Logo</a>
+      </div>
+      <button mat-icon-button color="accent" class="navbar-toggle" (click)="toggleNavbar()">
+        <mat-icon>{{!navbarOpened ? 'menu': 'close'}}</mat-icon>
+      </button>
+    </div>
+    <div fxFlex class="top-navbar">
+      <span fxFlex></span>
+      <a mat-button class="navbartop-btn"><strong>About Us</strong></a>
+      <a mat-button class="navbartop-btn"><strong>Services</strong></a>
+      <a mat-button class="navbartop-btn"><strong>Testimonials</strong></a>
+      <a mat-button class="navbartop-btn"><strong>Contact</strong></a>
+    </div>
+  </div>
+</header>-->
+
+
+
+
+<header class="navbar" [ngClass]="{'navbar-fixed': isFixedNavbar}">
+  <div class="topnav" id="myTopnav">
+
+  <!--  <div class="container" fxLayout="row wrap" fxLayoutAlign="start center">-->
+      <!--<div class="navbar-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">-->
+      <a  routerLinkActive="active" routerLink="accueil" class="navbar-logo"><img src="assets/images/logo.png" alt="RAFAROS-IT" height="55"><br />Accueil</a>
+      <!--<div class="navbar-logo">
+    <a routerLink="/">Logo</a>
+  </div>-->
+      <button mat-icon-button color="accent" class="navbar-toggle" (click)="toggleNavbar()">
+        <mat-icon>{{!navbarOpened ? 'menu': 'close'}}</mat-icon>
+      </button>
+      <!--</div>-->
+      <div fxFlex class="top-navbar">
+        <span fxFlex></span>
+        <a   routerLinkActive="active" routerLink="servdev"><div class="texton">SERVICES DE DEVELOPPEMENT</div></a>
+        <a   routerLinkActive="active" routerLink="boutique"><div class="texton">BOUTIQUE</div></a>
+        <a   routerLinkActive="active" routerLink="journinfo"><div class="texton">JOURNAL DE L'INFORMATIQUE</div></a>
+        <a   routerLinkActive="active" routerLink="competences"><div class="texton">COMPETENCES</div></a>
+        <a   routerLinkActive="active" routerLink="partenaires"><div class="texton">PARTENAIRES</div></a>
+        <a   routerLinkActive="active" routerLink="about"><div class="texton">A PROPOS</div></a>
+        <a   routerLinkActive="active" routerLink="crud"><div class="texton">CRUD ADMIN</div></a>
+        <a   routerLinkActive="active" routerLink="auth"><div class="texton">CONNEXION</div></a>
+</div>
+        <!--     POUR LA COMMUNICATION PAR MESSAGERIE INTERNE -->
+        <!--     <a href="./messages"><texton>MESSAGES</texton></a> -->
+        <!--     <a href="./index.html"><texton>INDEX</texton></a> -->
+        <!--<%-- INUTILE DANS CET APP     <a href="${link2}"><texton>what's this ?</texton></a>    --%>
+    <%--     <c:if test="${user.statut.contains('admin')}">
+      --%>-->
+        <!--<c:if test="${fn:contains(user.statut, 'admin')}">
+      <a href="./commandesCms.html"><texton>ADMINISTRATION CRUD/CMS</texton></a>
+    </c:if>-->
+        <!--Si l'utilisateur s'est authentifié remplacer l'onglet par "CONNECTED as" avec mention du nom et du statut du user-->
+        <!--<a href="${link}">
+    <texton>${connectedOrNot}<br />${user.username}</texton>-->
+        <!--Si l'utilisateur est authentifié faire apparaître (rendre visible) l'onglet suivant ("LOG OUT (Déconnexion)")-->
+        <!--<div style="visibility:${logout_ButtonState};" class="navbar-logo">
+        <img src="assets/images/logout_button.png" alt="RAFAROS-IT" height="25px"><br /><h9>Exit</h9>
+      </div>
+    </a>-->
+        <!--     THE BURGER MENU SYMBOL -->
+        <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>-->
+
+      </div>
+    <!--</div>-->
+</header>
