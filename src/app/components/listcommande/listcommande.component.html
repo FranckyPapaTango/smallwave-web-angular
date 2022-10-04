@@ -1,0 +1,56 @@
+<body>
+
+
+
+<div  class="container" style=" margin-top:16%;margin-bottom:16%;">
+  <h2>Liste des commandes</h2>
+ <!-- <button class="btn btn-primary mb-3" [routerLink]="['/commandeform']">Crear commande</button> -->
+  <table class="table">
+    <thead>
+    <tr >
+      <th scope="col">id</th>
+      <th scope="col">civilite</th>
+      <th scope="col">pays</th>
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">nomProduit</th>
+      <th scope="col">descriptionProduit</th>
+      <th scope="col">phone</th>
+
+      <th scope="col">instantMessenger</th>
+      <th scope="col">deadline</th>
+      <th scope="col">budget</th>
+      <th scope="col">pathDle</th>
+      <th scope="col">typecommande</th>
+      <th scope="col">Actions </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let commande of commandes"  class="{{commande.cssRawColorCode}}">
+      <th scope="row">{{commande.id}}</th>
+      <td >{{commande.civilite}}</td>
+      <td >{{commande.pays}}</td>
+      <td >{{commande.nom}}</td>
+      <td >{{commande.prenom}}</td>
+      <td >{{commande.nomProduit}}</td>
+      <td >{{commande.descriptionProduit}}</td>
+      <td >{{commande.phone}}</td>
+      <td >{{commande.instantMessenger}}</td>
+      <td >{{commande.deadline}}</td>
+      <td >{{commande.budget}}</td>
+      <td >{{commande.pathDle}}</td>
+      <td >{{commande.typecommande.libelle}}</td>
+      <td>
+        <button class="btn btn-warning me-2"  [routerLink]="['/commandeform', commande.id]">Editar</button> </td>
+      <td>  <button class="btn btn-danger" (click)="eliminarCommande(commande.id)">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+</div>
+</body>
+
+

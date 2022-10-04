@@ -1,0 +1,166 @@
+
+
+
+/*.body { setting backgroud image of body */
+/* CODE DEFAILLANT SI INJECTE ICI ?? WHY ?
+size:1920px;
+height:1080px;
+background: url('/assets/images/galaxy-wallpaper-1920x1080.jpg') no-repeat;
+background-size: cover;
+}
+*/
+
+
+.section-text{
+background: #008B8B;
+width: 180px;
+height: 200px;
+margin: auto;
+text-align:center;
+}
+
+.bigwave{
+color: red;
+font-style: italic;
+}
+.logo{
+width: 180px;
+height: 45px;
+}
+.gif{
+//padding-top:6px;
+width: 180px;
+height: 144px;
+}
+
+
+
+
+/*SLIDE SHOW IMAGE general styles*/
+
+/*body{padding: 3em;background-color: #ccc;}*/
+/*html {box-sizing: border-box;}*/
+//*, *:before, *:after {box-sizing: inherit;}
+
+
+
+
+
+/*slideshow styles
+
+.slideshow {
+  width: 955px;
+  margin-top: 0px;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+ border: solid 0.5px white;
+}
+
+.slideshow-container {
+  width: 3820px; // (955 x 4 images) /
+  font-size: 0;
+  transition: 1s ease;
+  height: 255px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+.slide-img, .text-container {
+  width: 955px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-container {
+  height: 255px;
+  position: relative;
+}
+
+
+p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}
+
+.slide {
+  animation: slide 9.87s ease infinite; // vitesse de défilement //
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  12.5% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  37.5% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  62.5% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+  87.5% {
+    transform: translateX(-75%);
+  }
+
+  99% {
+    transform: translateX(-75%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.p {
+  margin-top: 140px;
+  text-align: center;
+}
+
+SLIDE SHOW IMAGE END OF general styles*/
+
+
+
+/* VIDEO PLAYER */
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* END OF VIDEO PLAYER */
