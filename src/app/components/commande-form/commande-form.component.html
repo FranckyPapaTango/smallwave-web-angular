@@ -1,4 +1,4 @@
-<div class="container" style="position: sticky;top: 20%;">
+<div class="container" style=" margin-top:16%;margin-bottom:16%;">
   <br><br><br>
   <h2>Enregistrer commande</h2>
   <form >
@@ -13,8 +13,9 @@
     </div>
     <div class="mb-3">
       <label for="prenom" class="form-label">Prenom</label>
-      <input type="text" class="form-control" name="prenom" [(ngModel)]="commande.prenom">
+      <input type="text" class="form-control" name="prenom" [(ngModel)]="commande.prenom" required >
     </div>
+
 
     <div class="form-group">
       <label class="control-label col-sm-6">Civilite:</label>

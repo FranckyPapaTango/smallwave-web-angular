@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { NgImageSliderModule } from 'ng-image-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +30,7 @@ import { MatListModule } from '@angular/material/list' ;
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -51,15 +54,18 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+
     NgImageSliderModule,
     MatSidenavModule,
-      MatIconModule,
-      MatButtonModule,
-      MatToolbarModule,
-      FlexLayoutModule,
-      MatListModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatListModule,
 
-      FormsModule
+    FormsModule,
+    RouterModule
 
   ],
   exports: [
@@ -67,8 +73,12 @@ import { FormsModule } from '@angular/forms';
       MatIconModule,
       MatToolbarModule,
       MatButtonModule,
-            MatToolbarModule,
-            FlexLayoutModule
+      MatToolbarModule,
+      FlexLayoutModule,
+
+      RouterModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

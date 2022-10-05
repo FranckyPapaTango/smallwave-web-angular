@@ -24,6 +24,7 @@ const routes: Routes = [
   { path : 'about' , component : AboutComponent },
   { path : 'listcommande' , component : ListcommandeComponent },
   { path : 'commandeform' , component : CommandeFormComponent },
+  { path: 'commandeform/:id', component: CommandeFormComponent },
 
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo : "/not-found"}

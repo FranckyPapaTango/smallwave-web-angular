@@ -1,4 +1,4 @@
-<body>
+
 
 
 
@@ -10,9 +10,9 @@
     <tr >
       <th scope="col">id</th>
       <th scope="col">civilite</th>
-      <th scope="col">pays</th>
       <th scope="col">nom</th>
       <th scope="col">prenom</th>
+      <th scope="col">pays</th>
       <th scope="col">nomProduit</th>
       <th scope="col">descriptionProduit</th>
       <th scope="col">phone</th>
@@ -30,9 +30,9 @@
     <tr *ngFor="let commande of commandes"  class="{{commande.cssRawColorCode}}">
       <th scope="row">{{commande.id}}</th>
       <td >{{commande.civilite}}</td>
-      <td >{{commande.pays}}</td>
       <td >{{commande.nom}}</td>
       <td >{{commande.prenom}}</td>
+      <td >{{commande.pays}}</td>
       <td >{{commande.nomProduit}}</td>
       <td >{{commande.descriptionProduit}}</td>
       <td >{{commande.phone}}</td>
@@ -51,6 +51,6 @@
 
 
 </div>
-</body>
+
 
 
