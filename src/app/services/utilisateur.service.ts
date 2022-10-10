@@ -37,9 +37,9 @@ return this.http.get<Utilisateur[]>(this.url+"/getallutilisateur")  ;
       return this.http.delete<any>(this.url+'/deleteutilisateur/'+id)
     }
 
- /*  getuserwithloginandpassword(utilisateur: Utilisateur) : Observable<HttpResponse<Utilisateur>>{
-    return this.http.get<Utilisateur>(this.url+'/getuserwithloginandpassword',  utilisateur);
+   getuserwithloginandpassword(login: string, password: string) : Observable<Utilisateur>{
+    return this.http.get<Utilisateur>(this.url+'/getuserwithloginandpassword'+ login+','+ password);
     }
-*/
+
 
 }

@@ -1,1 +1,86 @@
-<p>auth works!</p>
+<body>
+
+
+
+
+<div class="pages" style='margin-top:16%;'>
+  <header style='margin-left: 39.42%;margin-bottom:6.28%'>
+    <h3>CONNEXION</h3>
+  </header>
+
+
+  <!--
+<div class="container">
+  <form method="POST" modelAttribute="utilisateur" class="form-horizontal">
+
+    <div class="form-group ">
+      <label class="control-label col-sm-2" for="login">Email address</label>
+      <div class="col-sm-10">
+        <input type="email" path="login" class="form-control no-border" id="login" placeholder="Entrez Email" name="login"/>
+      </div>
+
+
+    </div>
+    <div class="form-group ">
+      <label class="control-label col-sm-2" for="password">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" path="password" class="form-control no-border" id="userPw" placeholder="Entrez password" name="password"/>
+      </div>
+
+    </div>
+
+    <label class="control-label col-sm-2"></label>
+    <div class="col-sm-10">
+
+      <button class="btn btn-success"
+              *ngIf="!authStatus"
+              (click)="onSignIn()">Connexion</button>
+
+      <button class="btn btn-danger"
+              *ngIf="authStatus"
+              (click)="onSignOut()">Déconnexion</button>
+    </div>
+
+
+
+  </form>
+
+
+</div>
+</div>
+
+-->
+
+
+
+
+
+
+<div class="container login">
+  <section>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" [(ngModel)]="model.login" class="form-control" id="exampleInputEmail1" name="login" aria-describedby="emailHelp"
+               placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" [(ngModel)]="model.password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+               required>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Login</button>
+    </form>
+    <br>
+    <div class="alert alert-danger" *ngIf="showLoginWarningMessage" role="alert">
+      Invalid email id or password
+    </div>
+  </section>
+</div>
+</div>
+<br><br><br>
+</body>
+
+
+

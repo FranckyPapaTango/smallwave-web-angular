@@ -7,7 +7,7 @@
   @Component({
     selector: 'app-commande-form',
     templateUrl: './commande-form.component.html',
-    styleUrls: ['./commande-form.component.css']
+    styleUrls: ['./commande-form.component.scss']
   })
   export class CommandeFormComponent implements OnInit {
 

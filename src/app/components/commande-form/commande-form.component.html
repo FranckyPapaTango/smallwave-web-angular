@@ -1,18 +1,15 @@
-<div class="container" style=" margin-top:16%;margin-bottom:16%;">
+<div class="container" style="
+background-image: url('assets/images/galaxy.jpg') repeat;
+">
   <br><br><br>
-  <h2>Enregistrer commande</h2>
+  <h2>Envoyer une commande</h2>
   <form >
-    <!--   ONLY ID ARE NOT UPDATABLE
     <div class="mb-3">
-         <label for="exampleInputEmail1" class="form-label">Id</label>
-         <input type="text" class="form-control" name="id" [(ngModel)]="commande.id">
-       </div> -->
-    <div class="mb-3">
-      <label for="nom" class="form-label">Nom</label>
+      <label  class="form-label">Nom</label>
       <input type="text" class="form-control" name="nom" [(ngModel)]="commande.nom">
     </div>
     <div class="mb-3">
-      <label for="prenom" class="form-label">Prenom</label>
+      <label class="form-label">Prenom</label>
       <input type="text" class="form-control" name="prenom" [(ngModel)]="commande.prenom" required >
     </div>
 
@@ -22,8 +19,8 @@
       <div class="col-sm-60">
         <fieldset >
           <br>
-          <div style="display:inline ;" *ngFor="let civilite of civilites">
-            <label  style="padding-left:2%;" for="{{civilite}}">
+          <div class="once"  *ngFor="let civilite of civilites">
+            <label class="twice"  for="{{civilite}}">
               <input  id="{{civilite}}" [value]='civilite' type="radio" name="civilites" [(ngModel)]="commande.civilite">
               {{civilite}}
             </label>
@@ -33,7 +30,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-6" for="pays">Pays:</label>
+      <label class="control-label col-sm-6" >Pays:</label>
       <div class="col-sm-60">
         <select path="pays" class="form-control selectpicker" name="pays" [(ngModel)]="commande.pays">
           <option value="USA" >USA</option>
@@ -57,32 +54,32 @@
 
 
     <div class="mb-3">
-      <label for="nomProduit" class="form-label">NomProduit</label>
+      <label  class="form-label">Nom du Produit</label>
       <input type="text" class="form-control" name="nomProduit" [(ngModel)]="commande.nomProduit">
     </div>
 
     <div class="mb-3">
-      <label for="descriptionProduit" class="form-label">DescriptionProduit</label>
+      <label f class="form-label">Description du Produit (Résumé)</label>
       <input type="text" class="form-control" name="descriptionProduit" [(ngModel)]="commande.descriptionProduit">
     </div>
 
     <div class="mb-3">
-      <label for="phone" class="form-label">Phone</label>
+      <label  class="form-label">Phone</label>
       <input type="text" class="form-control" name="phone" [(ngModel)]="commande.phone">
     </div>
 
     <div class="mb-3">
-      <label for="instantMessenger" class="form-label">InstantMessenger</label>
+      <label  class="form-label">InstantMessenger (facultatif)</label>
       <input type="text" class="form-control" name="instantMessenger" [(ngModel)]="commande.instantMessenger">
     </div>
 
     <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
+      <label  class="form-label">Email</label>
       <input type="text" class="form-control" name="email" [(ngModel)]="commande.email">
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-6" for="deadline">Délais/Deadline:</label>
+      <label class="control-label col-sm-6" >Délais/Deadline:</label>
       <div class="col-sm-60">
         <select path="deadline" class="form-control selectpicker" name="deadline" [(ngModel)]="commande.deadline">
           <option value="7 jours" >7 jours</option>
@@ -103,7 +100,7 @@
 
 
     <div class="form-group">
-      <label class="control-label col-sm-6" for="budget">Quel est votre Budget </label>
+      <label class="control-label col-sm-6" >Quel est votre Budget </label>
       <div class="col-sm-60">
         <select path="budget"  class="form-control selectpicker" name="budget" [(ngModel)]="commande.budget">
           <option value="140 euros" >140 euros</option>
@@ -123,17 +120,21 @@
     </div>
 
     <div class="mb-3">
-      <label for="pathDle" class="form-label">PathDle</label>
+      <label  class="form-label">PathDle (chemin vers l'image de votre Avatr - facultatif)</label>
       <input type="text" class="form-control" name="pathDle" [(ngModel)]="commande.pathDle">
     </div>
+
     <div class="form-group row">
-      <label for="typecommande" class="col-form-label col-sm-2">Typecommande</label>
+      <label  class="control-label col-sm-6">Type du Produit commandé</label>
+      <div class="col-sm-60">
       <select [compareWith]="compararTypecommande" [(ngModel)]="commande.typecommande" class="form-control" name="typecommande">
         <option [ngValue]="undefined">--- Selectionner un Typecommande ---</option>
         <option *ngFor="let typecommande of typecommandes" [ngValue]="typecommande">{{ typecommande.libelle }}</option>
       </select>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary mt-3" (click)="crearCommande()" *ngIf="!commande.id">Enregistrer</button>
-    <button type="submit" class="btn btn-primary mt-3" (click)="actualizarCommande()" *ngIf="commande.id">Enregistrer</button>
+
+    <button type="submit" class="btn btn-primary mt-3" (click)="crearCommande()" *ngIf="!commande.id">Envoyer</button>
+    <button type="submit" class="btn btn-primary mt-3" (click)="actualizarCommande()" *ngIf="commande.id">Modifier</button>
   </form>
 </div>

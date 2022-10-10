@@ -5,7 +5,7 @@ import { Commande} from 'src/app/models/commande';
 @Component({
   selector: 'app-listcommande',
   templateUrl: './listcommande.component.html',
-  styleUrls: ['./listcommande.component.css']
+  styleUrls: ['./listcommande.component.scss']
 })
 export class ListcommandeComponent implements OnInit {
 

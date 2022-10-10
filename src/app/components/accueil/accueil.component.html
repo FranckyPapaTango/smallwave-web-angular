@@ -1,75 +1,92 @@
 
 
-
-
-<div style="
-padding-top:128px;
-size:1920px;
-/*height:1080px;* give height sufficient longer to not hide the video */
-height:1620px;
-background: url('/assets/images/galaxy.jpg') repeat;
-"
->
+<body style="background-color: #01DF3A;
+width:100%;
+height:100%;
+background: url('assets/images/galaxy.jpg') repeat;
+">
 
 
 
+<div id="example">
+  <marquee behavior="scroll" direction="left"
+           scrollamount="31" scrolldelay="25" onmouseover="this.stop();"
+           onmouseout="this.start();" bgcolor="grey">
+
+    <div class="textdef">
+      BIENVENU CHEZ RAFAROS-IT
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      (Micro Entreprise du Numérique)
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+      CONCEPTION ET DEVELOPPEMENT DE LOGICIELS
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D'APPLICATIONS WEB
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DE JEUX
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D'APPLICATIONS ANDROID
 
 
-
-
-
-  <!--hovering over the images will pause the slideshow -->
-  <div style="background-color:#2E2E2E;">
-    <div style="width: 775px; height: 200px; text-align:center;margin:0 auto 0 auto; padding:0 auto 0 auto;background-color: black;">
-
-      <ng-image-slider #nav
-                       [images]="imageObject"
-                       [infinite]="true"
-                       [autoSlide]="4"
-                       [imageSize]="{width: '775px',space: 0}"
-                       slideImage="1"></ng-image-slider>
     </div>
+  </marquee>
+</div>
 
-    <!--
-<section class="slideshow">
-  <div class="slideshow-container slide">
-    <div class="slide-img"><img src="assets/images/dev-im-defil-bis.gif"/><p>Conception - Développement de Logiciels Desktop, d'Application Android et d'Applications Web (Back-Office Front-Office).</p></div>
-    <div class="slide-img"><img src="assets/images/software-store-im-defil.gif"/><p>Magasin "E-STORE" de Vente en Ligne de Softwares et d'Applications professionnelles.</p></div>
-    <div class="slide-img"><img src="assets/images/it-news-articles-im-defil-955x255.jpg"/><p>Espace d'Informations et d'Actualités sur le monde de l'Informatique.<p></div>
-    <div class="slide-img"><img src="assets/images/partenaires-im-defil-955x255.jpg"/><p>Associations, Partenaires et Collaborateurs.</p></div>
+
+
+
+
+
+
+  <div style="width: 775px; height: 200px;margin:0 auto 0 auto; padding:0 auto 0 auto;background-color: black;">
+
+    <ng-image-slider #nav
+                     [images]="imageObject"
+                     [infinite]="true"
+                     [autoSlide]="4"
+                     [imageSize]="{width: '775px',space: 0}"
+                     slideImage="1"></ng-image-slider>
+  </div>
+
+
+
+
+
+
+
+
+
+<section class=" bloc2 mbr-section article content10 cid-s2DQ3L7aaI" id="content10-6 ">
+
+  <div class="container ">
+    <div class="inner-container" style="width: 66%;">
+      <hr class="line" style="width: 25%;">
+      <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+        <h2>Bienvenu chez RAFAROS-IT</h2>
+        <div id="logo"><img class="logo" src="assets/images/photo_about_smallwave/logo.gif"></div>
+        <div class="gif"><img src="assets/images/photo_about_smallwave/tornade.25954.gif"></div>
+
+      </div>
+      <hr class="line" style="width: 25%;">
+    </div>
   </div>
 </section>
- -->
+
+
+
+
+
+
+
+
+
+<!--     video VIDEO: smallwave (PRESENTATION) -->
+<div class="video-container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BQtHtxAH91M"></iframe>
 </div>
-<!--END OF the slideshow -->
-
-
-
-  <br><br>
-  <div class="section-text ">
-    <br/>
-    <h2> RAFAROS-IT<br/>
-      <div class="bigwave">Bigwave-IT</div>
-    </h2>
-    <img class="logo" src="assets/images/photo_about_smallwave/logo.gif">
-    <div class="gif"><img src="assets/images/photo_about_smallwave/tornade.25954.gif"></div>
-  </div>
-  <br><br>
 
 
 
 
-
-  <!--     video VIDEO: smallwave (PRESENTATION) -->
-
+</body>
 
 
 
 
-  <div class="container">
-    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BQtHtxAH91M"></iframe>
-  </div>
-
-
-
-</div>

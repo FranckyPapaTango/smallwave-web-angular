@@ -11,9 +11,7 @@ describe('AuthComponent', () => {
       declarations: [ AuthComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(AuthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

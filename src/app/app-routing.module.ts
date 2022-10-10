@@ -12,6 +12,10 @@ import { CommandeFormComponent } from './components/commande-form/commande-form.
 
 
 import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthguardService } from './services/authguard.service';
+
 
 const routes: Routes = [
   { path : '' , component : AccueilComponent },
@@ -22,10 +26,12 @@ const routes: Routes = [
   { path : 'competences' , component : CompetencesComponent },
   { path : 'partenaires' , component : PartenairesComponent },
   { path : 'about' , component : AboutComponent },
-  { path : 'listcommande' , component : ListcommandeComponent },
+  { path : 'listcommande' , component : ListcommandeComponent , canActivate: [AuthguardService] },
   { path : 'commandeform' , component : CommandeFormComponent },
-  { path: 'commandeform/:id', component: CommandeFormComponent },
+  { path : 'commandeform/:id', component: CommandeFormComponent },
 
+  { path: 'auth', component: AuthComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo : "/not-found"}
 ];
