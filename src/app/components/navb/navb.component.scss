@@ -1,13 +1,103 @@
-a{
-    text-decoration: none;
-    color: white;
+header{
+padding:18px;/* épaisseur du navbar */
+background-color:#0489B1;
+z-index:22222;
+position: sticky;
+top: 0;
+
 }
 
-a:hover, a:active{
-    color: lightgray;
+.texton {
+  font-size: 100%;
+  color:white;
 }
 
-.nav-caption{
-    display: inline-block;
-    padding-left: 6px;
+
+img{
+height:62px;
+}
+
+.menu {
+width:100%;
+}
+
+.menu ul li{
+list-style-type:none;/* liste sans point de marque */
+color:white;
+display:inline-block; /* affichage horizontal de la liste (et non vertical)*/
+margin-left:44px;/* espace entre les éléments de la liste */
+}
+
+.menu ul li:hover{ /* effect hover */
+color: #0B4C5F;/* effect hover color*/
+cursor:pointer;/* curseur type changmt */
+transition:0.4s ease-in-out;
+}
+
+/* responsivité */
+
+@media only screen and (max-width:999px){
+
+.menu-icon span{/* Hamburger appear */
+width:32px;
+height:3px;
+background:white;
+display:block;
+}
+.menu-icon span:nth-child(2){/* Hamburger appear */
+margin: 5px 0;/* espacement des rayures du hamburger */
+}
+.menu-icon {/* Hamburger appear */
+display:inline-block;
+position:relative;
+bottom:12px;
+top:12px;
+cursor:pointer;/* curseur type changmt */
+}
+
+
+
+
+
+ .menu ul li{
+list-style-type:none;/* liste sans point de marque */
+color:white;
+display:block; /* affichage vertical de la liste (et non Horizontal)*/
+padding:10px 0 10px 26px;/* espace entre les éléments de la liste */
+margin:0px;
+text-align:left;
+border-bottom:1px solid #0B4C5F;/* séparateur d'élément coloré */
+}
+
+.menu{
+position:fixed;/* interdit l'augmentation-grossissement de l'épaisseur */
+/*right:0px;/* positionne le bloc à droite */
+right:-280px;/* invisible : positionne le bloc en dehors de l'écran à droite */
+top:64px;
+background-color:#0489B1;
+/*height:100%;*/
+width:280px;
+z-index:22222;
+}
+
+
+/*  toggled class  */
+.menuClass{
+right:0px;
+transition:0.2s ease-in-out;
+}
+
+/*  toggled class  */
+.menu_icon_class span:nth-child(2){
+display:none;
+}
+/*  toggled transformed class  */
+.menu_icon_class span:nth-child(1){
+transform:rotate(40deg);
+}
+/*  toggled transformed class  */
+.menu_icon_class span:nth-child(3){
+transform:rotate(-40deg);
+margin-top:-3px;
+}
 }
