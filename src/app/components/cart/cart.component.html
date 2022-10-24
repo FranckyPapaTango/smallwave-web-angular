@@ -39,12 +39,12 @@
           <tr>
             <td colspan="4"></td>
             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
-            <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
+            <td><button routerLink="/boutique" class="btn btn-primary">Shop More</button></td>
             <!--                            <td><button class="btn btn-success">Checkout</button></td>-->
 
             <div class="col-md4">
               <ngx-paypal [config]="payPalConfig">Checkout</ngx-paypal>
-              <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+              <td><strong>Grand Total : {{grandTotal}}&nbsp;&euro;</strong></td>
             </div>
 
           </tr>
