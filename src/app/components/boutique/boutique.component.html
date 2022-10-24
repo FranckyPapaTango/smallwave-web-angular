@@ -1,13 +1,6 @@
-<title>E-COMMERCE</title>
-
-<style>
-  .btn_der {
-    text-align: center;
-  }
-</style>
 
 
-<body style="background-color: #E2A9G0;">
+<section style="background-color: #E2A9G0;">
 
 
 
@@ -26,34 +19,80 @@
 
 
 
-<!--==================================================================================-->
+<!--===================================  FILTERS ===============================================-->
+
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a (click)="filter('')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+        <h6>All products</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('electronics')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+        <h6>Electronics</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('fashion')">
+        <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+        <h6>Fashion</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('jewelery')">
+        <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
+        <h6>Jewllery</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- - - - - - Add to cart- - - - - --->
+
 
 
 <div class="main">
   <h1>PRODUITS DISPONIBLES</h1>
+
+
+
+
+
   <br>
   <ul class="cards">
+
+
+<!--======================== - - - - -  ROWS  - - - - - - ==========================================================-->
+
+
+
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="assets/images/photos_produits/dictate.gif" alt="Mobirise"></div>
         <div class="card_content">
           <h2 class="card_title">DICTATE </h2>
+          <br/>
           <p class="card_text">Dictez tout par la voie (Application Android sur Google Play Store)</p>
-          <p>1,80 euros</p>
+          <p><strong>Prix:</strong> 1,80 euros</p>
           <a href="https://play.google.com/store/apps/details?id=com.rafaros.fileselector">
           <button class="btn card_btn">Voir Détail</button>
           </a>
         </div>
       </div>
     </li>
+
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="assets/images/photos_produits/forgame.gif" alt="Mobirise"></div>
         <div style="height:27.5%;"></div>
         <div class="card_content">
           <h2 class="card_title">FORGAME 2D-3D</h2>
+          <br/>
           <p class="card_text">Jeux 2D / 3D (Application Android sur Google Play Store)</p>
-          <p>0,00 euros (Gratuit)</p>
+          <p><strong>Prix:</strong> 0,00 euros (Gratuit)</p>
           <a href="https://play.google.com/store/apps/details?id=com.rafaros.game">
           <button class="btn card_btn">Voir Détail</button>
           </a>
@@ -66,210 +105,55 @@
         <div style="height:27.5%;"></div>
         <div class="card_content">
           <h2 class="card_title">LOGAID</h2>
+          <br/>
           <p class="card_text">Utilitaire pour livrez avec aisance (Application Android sur Google Play Store)</p>
-          <p>38,40 euros</p>
+          <p><strong>Prix:</strong> 38,40 euros</p>
           <a href="https://play.google.com/store/apps/details?id=com.smallwave.logaid">
             <button class="btn card_btn">Voir Détail</button>
           </a>
         </div>
       </div>
     </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="assets/images/photos_produits/siteECommerce.jpg" alt="Mobirise"></div>
-        <div style="height:27.5%;"></div>
-        <div class="card_content">
-          <h2 class="card_title">SITE WEB PHP5</h2>
-          <p class="card_text">E-Commerce + base de données , sites pro + cms personalisé</p>
-          <p>551,00 euros</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr"
-                method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="P42X9FZEY8K2G">
-            <input type="image"
-                   src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif"
-                   border="0" name="submit"
-                   alt="PayPal, le réflexe sécurité pour payer en ligne">
-            <img alt="" border="0"
-                 src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"
-                 width="1" height="1">
-          </form>
+
+
+    <!--    - - - - - - - - -             STREAMED ROWS     - - - - - - - - - - -       ------>
+
+    <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+      <li class="cards_item">
+        <div class="card ">
+          <div class="card_image"><img src="{{item.image}}" alt="Mobirise"></div>
+          <div class="card_content">
+
+            <h2 class="card_title">{{item.title}}</h2>
+            <br/>
+            <p class="card_text">{{item.description}}</p>
+            <p><strong>Prix:</strong> {{item.price}}&nbsp;&euro;</p>
+            <button *ngIf="item.isAvailable" class="btn card_btn" (click)=addtocart(item)>Ajouter au Pannier</button>
+
+          </div>
         </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="assets/images/photos_produits/SITE PRO JAVA EE AVEC CONTENEUR LEGER.png" alt="Mobirise"></div>
-        <div class="card_content">
-          <h2 class="card_title">SITE PRO JAVA EE A ARCHITECTURE N-TIERS AVEC CONTENEUR LEGER </h2>
-          <p class="card_text">(moyen traffic)<br> (Serveur TOMCAT+SPRING CORE)+Base de
-            données OBJECTDB ou/ MYSQL8 ou POSTGRESQL10 +CMS)<br></p>
-          <p>3 600,00 euros</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr"
-                method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="KHMGJFHY329MU">
-            <!--                                    <table>
-                                    <tr><td><input type="hidden" name="on0" value="IMPORTANT">IMPORTANT</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                                </table>-->
-            <input type="image"
-                   src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif"
-                   border="0" name="submit"
-                   alt="PayPal, le réflexe sécurité pour payer en ligne">
-            <img alt="" border="0"
-                 src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"
-                 width="1" height="1">
-          </form>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="assets/images/photos_produits/SITE PRO JAVA EE AVEC CONTENEUR LOURD.png" alt="Mobirise"></div>
-        <div class="card_content">
-          <h2 class="card_title">SITE PRO JAVA EE A ARCHITECTURE REPARTIE AVEC CONTENEUR LOURD </h2>
-          <p class="card_text">(gros traffic)<br> (Serveur d'application GLASSFISH+EJB+JSP)
-            + base de données MYSQL7 ou POSTGRESQL10+CMS)</p>
-          <p>6 000,00 euros</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr"
-                method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="XYMQ67Q7DHKPQ">
-            <!--                                    <table>
-                                    <tr><td><input type="hidden" name="on0" value="IMPORTANT">IMPORTANT</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                                </table>-->
-            <input type="image"
-                   src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_buynowCC_LG.gif"
-                   border="0" name="submit"
-                   alt="PayPal, le réflexe sécurité pour payer en ligne">
-            <img alt="" border="0"
-                 src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"
-                 width="1" height="1">
-          </form>
-        </div>
-      </div>
-    </li>
+      </li>
+    </ng-container>
+
+
+
   </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 <h3 class="made_by">Mis à jour : 10/10/2022</h3>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="services1 cid-rqEcPLInO6" id="services1-d">
-  <!---->
-  <!----> <!--Overlay--> <!--Container-->
-  <div class="container">
-    <div class="row justify-content-center">
-      <!--Titles-->
-      <div class="title pb-5 col-12"></div>
-      <!--Card-1-->
-
-      <!--Card-2-->
-
-      <!--Card-3-->
-
-      <!--Card-4-->
-
-      <!--Card-5-->
-
-      <!--Card-6-->
-
-      <!--Card-7-->
-      <div class="card col-12 col-md-6 p-3 last-child">
-        <div class="card-wrapper">
-          <div class="card-img">
-            <img src="assets/images/photos_produits/images.jpg"
-                 alt="Mobirise">
-          </div>
-          <div class="card-box">
-            <h4 class="card-title mbr-fonts-style display-5">
-              LOGAID
-              (Version pour PC)
-            </h4>
-            <p class="mbr-text mbr-fonts-style display-7">
-              (APPLICATION ERP DE GESTION D'ACTIVITE DE TRANSPORT/LIVRAISON<br>
-              (produit smallwave) <br> <br>
-              <!--                                <a href='#' onClick='javascript:popupcentree("https://play.google.com/store/apps/details?id=com.smallwave.logaid_", 1256, 628,
-                                                                                "menubar=yes,scrollbars=yes,statusbar=no");'>détail/descriptif</a>-->
-            </p>
-            <!--Btn-->
-            <div class="mbr-section-btn align-left">
-              <a href="" class="btn btn-warning-outline display-4">
-                540,00
-                euros TTC
-              </a>
-              <form target="paypal"
-                    action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="XLZVE6UKGHNQJ">
-                <!--                                    <table>
-                                        <tr><td><input type="hidden" name="on0" value="IMPORTANT">IMPORTANT</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                                    </table>-->
-                <input type="image"
-                       src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_cart_LG.gif"
-                       border="0" name="submit"
-                       alt="PayPal, le réflexe sécurité pour payer en ligne">
-                <img alt="" border="0"
-                     src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"
-                     width="1" height="1">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Card-8-->
-      <div class="card col-12 col-md-6 p-3 last-child">
-        <div class="card-wrapper">
-          <div class="card-img">
-            <img src="assets/images/photos_produits/images2.jpg"
-                 alt="Mobirise">
-          </div>
-          <div class="card-box">
-            <h4 class="card-title mbr-fonts-style display-5">
-              LOGITRA <br>
-            </h4>
-            <p class="mbr-text mbr-fonts-style display-7">
-              LOGICIEL DE GESTION DE TRAVAUX ET DE CALCUL DE COÛT DE
-              CONSTRUCTION (BTP)<br> (produit smallwave * en cours de
-              réalisation) <br> <br>
-              <!--                                <a href='#' onClick='javascript:popupcentree("https://play.google.com/store/apps/details?id=com.smallwave.logaid_", 1256, 628,
-                                                                                "menubar=yes,scrollbars=yes,statusbar=no");'>détail/descriptif</a>-->
-            </p>
-            <!--Btn-->
-            <div class="mbr-section-btn align-left">
-              <a href="" class="btn btn-warning-outline display-4">
-                3195,50
-                euros TTC
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-    </div>
-  </div>
-</section>
 
 
 
@@ -279,44 +163,8 @@
 <br>
 <br>
 <br>
-<div class="btn_der">
-  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
-        method="post">
-    <input type="hidden" name="cmd" value="_cart"> <input type="hidden" name="business" value="JJLG3P66QB3YY"> <input type="hidden" name="display" value="1"> <input type="image"
-                                                                                                                                                                     src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_viewcart_LG.gif"
-                                                                                                                                                                     border="0" name="submit"
-                                                                                                                                                                     alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-    <img alt="" border="0"
-         src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1"
-         height="1">
-  </form>
-  <br>
-  <br>
-  <br>
-
-  <div id="dons">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post"
-          target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="F4UU45ME8ZSGY">
-      <input type="image"
-             src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"
-             border="0" name="submit"
-             alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-      <img alt="" border="0"
-           src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1"
-           height="1">
-    </form>
-  </div>
-</div>
-<br>
-<br>
-<br>
 
 
 
-
-
-
-
-</body>
+</section>
 

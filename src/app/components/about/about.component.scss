@@ -16,16 +16,22 @@ body {
 .card {
   background: #fdfdfd;
   border-radius: 4px;
-  height: 85vh;
-  width: 80vw;
+  height: 100vh;
+
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  text-align: center;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+
   overflow: hidden;
+  position: sticky;
+  width: 100%;
+}
+
+.text{
+margin:3%;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -45,7 +51,7 @@ body {
   }
   .card img.birthday {
     width: 100%;
-    max-width: 50vw;
+    max-width: 60vw;
     max-height: unset;
   }
 }

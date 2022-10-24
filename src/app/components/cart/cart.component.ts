@@ -1,61 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import {ICreateOrderRequest, IPayPalConfig} from 'ngx-paypal';
-import { ApiService } from 'src/app/services/api.service';
 import { CartService } from 'src/app/services/cart.service';
-import { ProduitService } from 'src/app/services/produit.service';
-
-
+import {ICreateOrderRequest, IPayPalConfig} from 'ngx-paypal';
 
 @Component({
-  selector: 'app-boutique',
-  templateUrl: './boutique.component.html',
-  styleUrls: ['./boutique.component.scss']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss']
 })
-export class BoutiqueComponent implements OnInit {
+export class CartComponent implements OnInit {
 
-  public productList : any ;
-  public filterCategory : any
-  searchKey:string ="";
-  constructor(private api : ApiService, private cartService : CartService, private produitService : ProduitService) { }
 
 public payPalConfig ?: IPayPalConfig;
-public payPalConfig2 ?: IPayPalConfig;
-public payPalConfig3 ?: IPayPalConfig;
 
- ngOnInit(): void {
- /* getting products */
+  public products : any = [];
+  public grandTotal !: number;
+  constructor(private cartService : CartService) { }
 
-/*    this.api.getProduct() */
-    this.produitService.getProduits()
-     .subscribe(res=>{
-       this.productList = res;
-       this.filterCategory = res;
-       this.productList.forEach((a:any) => {
-         if(a.category ==="women's clothing" || a.category ==="men's clothing"){
-           a.category ="fashion"
-         }
-         Object.assign(a,{quantity:1,total:a.price});
-       });
-       console.log(this.productList)
-     });
+  ngOnInit(): void {
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.products = res;
+      this.grandTotal = this.cartService.getTotalPrice();
+    });
 
-     this.cartService.search.subscribe((val:any)=>{
-       this.searchKey = val;
-     })
+    this.initConfig();
+  }
 
+  removeItem(item: any){
+    this.cartService.removeCartItem(item);
+  }
 
-
-
-
-/* getting paypal config */
-this.initConfig();
+  emptycart(){
+    this.cartService.removeAllCart();
   }
 
 
 
-
-
-/* configuring paypal */
 private initConfig(): void {
     this.payPalConfig = {
       currency: 'EUR',
@@ -65,11 +45,12 @@ private initConfig(): void {
         purchase_units: [{
           amount: {
             currency_code: 'EUR',
-            value: '551',
+         /*    value: '551', */
+            value: `${this.grandTotal}`,
             breakdown: {
               item_total: {
                 currency_code: 'EUR',
-                value: '551'
+                value: `${this.grandTotal}`
               }
             }
           },
@@ -79,7 +60,7 @@ private initConfig(): void {
             category: 'DIGITAL_GOODS',
             unit_amount: {
               currency_code: 'EUR',
-              value: '551',
+              value: `${this.grandTotal}`,
             },
           }]
         }]
@@ -117,32 +98,4 @@ private initConfig(): void {
       }
     };
 }
-/************** END OF PAYPAL CONFIG ********************************/
-
-
-/* define cart method */
-  addtocart(item: any){
-    this.cartService.addtoCart(item);
-  }
-
-
-
-/* Filtering by Filter Category method */
-  filter(category:string){
-    this.filterCategory = this.productList
-    .filter((a:any)=>{
-      if(a.category == category || category==''){
-        return a;
-      }
-    })
-  }
-
-
-
-
 }
-
-
-
-
-

@@ -1,32 +1,49 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="row container-fluid">
 
-<nav id="hamnav">
-  <div class="topnav" id="myTopnav">
+    <a    routerLink="accueil" (click)="onSidenavClose()" class="navbar-brand">
+      <img src="assets/images/logo.png" height="55" alt="CoolBrand">
+      <br/>&nbsp;&nbsp;&nbsp;ACCUEIL
+    </a>
 
-    <a  routerLinkActive="active" routerLink="accueil" class="navbar-logo"><img src="assets/images/logo.png" alt="RAFAROS-IT" height="55"><br>Accueil</a>
+<!--    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>-->
 
+    <button type="button"  class="menu-icon" (click)="openMenu()" [class.menu_icon_class]="menu_icon_class_BooleanVariable">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
+    <div [class.menuClass]="menuBooleanVariable" class="menu collapse navbar-collapse" id="navbarCollapse">
 
-    <label for="hamburger">&#9776;</label>
-    <input type="checkbox" id="hamburger"/>
+      <ul class="navbar-nav">
+        <li><a    routerLink="servdev" (click)="onSidenavClose()"><div class="texton">SERVICES</div></a></li>
+        <li><a    routerLink="boutique" (click)="onSidenavClose()"><div class="texton">BOUTIQUE</div></a></li>
+        <li><a    routerLink="journinfo" (click)="onSidenavClose()"><div class="texton">JOURNAL DE L'IT</div></a></li>
+        <li><a    routerLink="competences" (click)="onSidenavClose()"><div class="texton">COMPETENCES</div></a></li>
+        <li><a    routerLink="partenaires" (click)="onSidenavClose()"><div class="texton">PARTENAIRES</div></a></li>
+        <li><a    routerLink="about" (click)="onSidenavClose()"><div class="texton">A PROPOS</div></a></li>
+        <li><a    routerLink="listcommande" (click)="onSidenavClose()"><div class="texton">CRUD ADMIN</div></a></li>
+      </ul>
 
+      <div class="navbar-nav ms-auto">
+        <a    routerLink="auth" (click)="onSidenavClose()"><div class="texton btn btn-success" *ngIf="!authStatus">CONNEXION</div>
+          <div class="texton btn btn-danger"  *ngIf="authStatus" >DECONNEXION</div>        </a>
+      </div>
 
-    <div id="hamitems">
-      <a    routerLink="servdev"><div class="texton">SERVICES</div></a>
-      <a    routerLink="boutique"><div class="texton">BOUTIQUE</div></a>
-      <a    routerLink="journinfo"><div class="texton">JOURNAL DE LINFORMATIQUE</div></a>
-      <a    routerLink="competences"><div class="texton">COMPETENCES</div></a>
-      <a    routerLink="partenaires"><div class="texton">PARTENAIRES</div></a>
-      <a    routerLink="about"><div class="texton">A PROPOS</div></a>
-      <a    routerLink="listcommande"><div class="texton">CRUD ADMIN</div></a>
+      <button routerLink="cart" class="btn btn-primary">
+        <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+      </button>
 
-      <a    routerLink="auth" ><div class="texton btn btn-success" *ngIf="!authStatus">CONNEXION</div>
-                                                        <div class="texton btn btn-danger"  *ngIf="authStatus" >DECONNEXION</div>        </a>
     </div>
 
   </div>
-
-  </nav>
-
+</nav>
+</header>
 
 
 

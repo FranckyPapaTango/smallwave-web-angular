@@ -1,38 +1,48 @@
 <header>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="navbar navbar-expand-lg">
 
       <div class="col-md-2 col-sm-2 col-2 ">
         <!--<div class="logo"><img src="./assets/images/logo.png"  alt="LOGO"></div>-->
-        <a  routerLinkActive="active" routerLink="accueil" class="logo"><img src="assets/images/logo.png" alt="RAFAROS-IT" height="55"><br>
-          <div class="texton">Accueil</div></a>
+        <a  routerLinkActive="active" routerLink="accueil" class="logo" (click)="onSidenavClose()"><img src="assets/images/logo.png" alt="RAFAROS-IT" height="55"></a><br>
+          <div class="texton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accueil</div>
       </div>
 
       <div class="col-md-8 col-sm-8 col-8 text-end ">
+
+        <div class="menu" [class.menuClass]="menuBooleanVariable" >
+          <ul>
+
+            <li><a    routerLink="servdev" (click)="onSidenavClose()"><div class="texton">SERVICES</div></a></li>
+            <li><a    routerLink="boutique" (click)="onSidenavClose()"><div class="texton">BOUTIQUE</div></a></li>
+            <li><a    routerLink="journinfo" (click)="onSidenavClose()"><div class="texton">JOURNAL DE LINFORMATIQUE</div></a></li>
+            <li><a    routerLink="competences" (click)="onSidenavClose()"><div class="texton">COMPETENCES</div></a></li>
+            <li><a    routerLink="partenaires" (click)="onSidenavClose()"><div class="texton">PARTENAIRES</div></a></li>
+            <li><a    routerLink="about" (click)="onSidenavClose()"><div class="texton">A PROPOS</div></a></li>
+            <li><a    routerLink="listcommande" (click)="onSidenavClose()"><div class="texton">CRUD ADMIN</div></a></li>
+
+          </ul>
+
+
+        </div>
+
+        <button><a    routerLink="auth" (click)="onSidenavClose()"><div class="texton btn btn-success" *ngIf="!authStatus">CONNEXION</div>
+          <div class="texton btn btn-danger"  *ngIf="authStatus" >DECONNEXION</div>        </a></button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button routerLink="cart" class="btn btn-primary">
+          <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="menu-icon" (click)="openMenu()" [class.menu_icon_class]="menu_icon_class_BooleanVariable">
           <span></span>
           <span></span>
           <span></span>
 
         </div>
-        <div class="menu" [class.menuClass]="menuBooleanVariable">
-          <ul>
-            <li><a    routerLink="servdev"><div class="texton">SERVICES</div></a></li>
-            <li><a    routerLink="boutique"><div class="texton">BOUTIQUE</div></a></li>
-            <li><a    routerLink="journinfo"><div class="texton">JOURNAL DE LINFORMATIQUE</div></a></li>
-            <li><a    routerLink="competences"><div class="texton">COMPETENCES</div></a></li>
-            <li><a    routerLink="partenaires"><div class="texton">PARTENAIRES</div></a></li>
-            <li><a    routerLink="about"><div class="texton">A PROPOS</div></a></li>
-            <li><a    routerLink="listcommande"><div class="texton">CRUD ADMIN</div></a></li>
-
-            <li><a    routerLink="auth" ><div class="texton btn btn-success" *ngIf="!authStatus">CONNEXION</div>
-              <div class="texton btn btn-danger"  *ngIf="authStatus" >DECONNEXION</div>        </a></li>
-          </ul>
-        </div>
       </div>
 
     </div>
-
   </div>
 </header>
 

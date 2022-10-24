@@ -34,6 +34,28 @@ cursor:pointer;/* curseur type changmt */
 transition:0.4s ease-in-out;
 }
 
+
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 59%;
+    top: 20px;
+    color: blue;
+}
+
+
+
+
+
+
+
+
 /* responsivité */
 
 @media only screen and (max-width:999px){
@@ -52,6 +74,7 @@ display:inline-block;
 position:relative;
 bottom:12px;
 top:12px;
+padding-right:0px;
 cursor:pointer;/* curseur type changmt */
 }
 
@@ -71,9 +94,9 @@ border-bottom:1px solid #0B4C5F;/* séparateur d'élément coloré */
 
 .menu{
 position:fixed;/* interdit l'augmentation-grossissement de l'épaisseur */
-/*right:0px;/* positionne le bloc à droite */
+/* right:0px;/* positionne le bloc à droite */
 right:-280px;/* invisible : positionne le bloc en dehors de l'écran à droite */
-top:64px;
+top:132px;/* position de la hauteur du sommet du bloc de liste */
 background-color:#0489B1;
 /*height:100%;*/
 width:280px;
@@ -101,3 +124,11 @@ transform:rotate(-40deg);
 margin-top:-3px;
 }
 }
+
+/*fin responsivité */
+
+
+
+
+
+

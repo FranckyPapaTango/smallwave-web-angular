@@ -9,6 +9,7 @@ import { PartenairesComponent } from './components/partenaires/partenaires.compo
 import { AboutComponent } from './components/about/about.component';
 import { ListcommandeComponent } from './components/listcommande/listcommande.component';
 import { CommandeFormComponent } from './components/commande-form/commande-form.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path : 'listcommande' , component : ListcommandeComponent , canActivate: [AuthguardService] },
   { path : 'commandeform' , component : CommandeFormComponent },
   { path : 'commandeform/:id', component: CommandeFormComponent },
+  { path : 'cart', component: CartComponent},
 
   { path: 'auth', component: AuthComponent },
   { path: 'dashboard', component: DashboardComponent },

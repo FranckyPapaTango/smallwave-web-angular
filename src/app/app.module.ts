@@ -40,6 +40,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+import { NgxPayPalModule } from 'ngx-paypal';
+import { CartComponent } from './components/cart/cart.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +62,9 @@ import { RouterModule, Routes } from '@angular/router';
     NavbarComponent,
     PartenairesComponent,
     ServdevComponent,
-    NavbComponent
+    NavbComponent,
+    CartComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -77,7 +84,10 @@ import { RouterModule, Routes } from '@angular/router';
     MatMenuModule,
 
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+
+    NgxPayPalModule
 
   ],
   exports: [

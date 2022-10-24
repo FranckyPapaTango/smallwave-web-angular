@@ -1,7 +1,7 @@
-import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 //import { AuthService } from 'src/app/services/auth.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+ import { CartService } from 'src/app/services/cart.service';
+
 
 
 @Component({
@@ -11,49 +11,44 @@ import { Observable } from 'rxjs';
 })
 export class NavbarComponent implements OnInit {
 
-/* utilisée dans ancienne version pour alternativer l'affichage des 2 boutons login/logout:*/
- authStatus!: boolean;
- //  authStatus=  false;
+authStatus: boolean =false;
+menuBooleanVariable : boolean =false;
+menu_icon_class_BooleanVariable: boolean =false;
 
-  isFixedNavbar!: boolean;
-
-  @HostBinding('class.navbar-opened') navbarOpened = false;
-  static navbarOpened: boolean;
-
+  public totalItem : number = 0;
+  public searchTerm !: string;
+  constructor(private cartService : CartService) { }
 
 
-  //constructor(private authService : AuthService,private router : Router, private route: ActivatedRoute) { }
-
-  constructor(private router : Router, private route: ActivatedRoute) { }
-
-
-  ngOnInit() {
-  /* utilisée dans ancienne version pour alternativer l'affichage des 2 boutons login/logout:
-      this.authStatus = this.authService.isAuth;
-  //* call the defined observable in  authService
-      const isAuthObservable = this.authService.getIsAuth();
-          //* subscribe authStatus to the observable  isAuth :
-              isAuthObservable.subscribe((isAuth : any) => {
-                  this.authStatus = isAuth ;
-              });*/
+ ngOnInit(): void {
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+    })
   }
 
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (offset > 10) {
-      this.isFixedNavbar = true;
-    } else {
-      this.isFixedNavbar = false;
+    search(event:any){
+      this.searchTerm = (event.target as HTMLInputElement).value;
+      console.log(this.searchTerm);
+      this.cartService.search.next(this.searchTerm);
     }
+
+
+
+openMenu(){
+/* this.menuBooleanVariable=true;  to toggle : */
+this.menuBooleanVariable= ! this.menuBooleanVariable;
+/* toggled too */
+this.menu_icon_class_BooleanVariable= ! this.menu_icon_class_BooleanVariable;
+}
+
+
+/* collapse menu after a link is clicked */
+  public onSidenavClose = () => {
+    this.menuBooleanVariable= false;
+    this.menu_icon_class_BooleanVariable=false;
   }
-
-
-  toggleNavbar() {
-    this.navbarOpened = !this.navbarOpened;
-  }
-
 
 
 }

@@ -49,11 +49,12 @@ img {
   width: 100%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  /*background: transparent;*/
+  background: #0489B1;
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(75,155, 180,0.8);
 }
 
 .cards {
