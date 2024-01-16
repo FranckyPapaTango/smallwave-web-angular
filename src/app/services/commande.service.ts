@@ -10,7 +10,8 @@ import { Typecommande } from 'src/app/models/typecommande';
 
 export class CommandeService {
 
-  url: string = "http://localhost:8080/api/commande";
+ // url: string = "http://localhost:8082/api/commande";
+  url: string = "https://rafaros-it.fr/backend-smallwave/api/commande";
 
 constructor(private http: HttpClient ){}
 
