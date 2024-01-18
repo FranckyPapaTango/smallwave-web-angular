@@ -15,14 +15,18 @@
 text-align:center;
 font-weight: bold;
 color: white;
+font-size: 1.5707em;
 }
+
 .bold{
 font-weight: bold;
 color: white;
+font-size: 1.1781em;
 }
 .justif{
 text-align:justify;
 color: black;
+font-size: 1.1781em;
 }
 
 /* 3 Card css responsive */
@@ -60,7 +64,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #086A87 ;
+  background-color: #6c7070 ;
   color: white;
 }
 
@@ -76,4 +80,16 @@ body {
     display: block;
     margin-bottom: 20px;
   }
+
+  .quest{
+    text-align:center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1781em;
+    }
+    .justif{
+      text-align:left;
+      color: black;
+      font-size: 1.1781em;
+      }
 }

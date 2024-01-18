@@ -17,7 +17,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
 import { JourninfoComponent } from './components/journinfo/journinfo.component';
 import { ListcommandeComponent } from './components/listcommande/listcommande.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { PartenairesComponent } from './components/partenaires/partenaires.component';
 import { ServdevComponent } from './components/servdev/servdev.component';
 
@@ -59,7 +58,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     FourOhFourComponent,
     JourninfoComponent,
     ListcommandeComponent,
-    NavbarComponent,
     PartenairesComponent,
     ServdevComponent,
     NavbComponent,

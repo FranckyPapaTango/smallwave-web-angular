@@ -1,98 +1,36 @@
 /*SLIDE SHOW IMAGE general styles*/
+.partners-container {
+  padding-top: 31.416px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: 31.416px;
+  padding-bottom: opx;
+  width: 10%;
+  margin: auto;
+}
+.partners {
+justify-content: center;
+  
+}
 
-body{padding: 3em;background-color: #ccc;}
-html {box-sizing: border-box;}
-*, *:before, *:after {box-sizing: inherit;}
-
-
+.imgslideur {
+  overflow: hidden;
+  width: 775px;
+  height: 200px;
+  margin:0 auto 0 auto; 
+  padding:0 auto 0 auto;
+  background-color: black;
+}
 /*slideshow styles*/
 
-.slideshow {
-  width: 955px;
-  margin: 0 auto;
-  overflow: hidden;
- /* border: solid 1px white;*/
-}
 
-.slideshow-container {
-  width: 4775px; /* (955 x 5 images) */
-  font-size: 0;
-  transition: 1s ease;
-  height: 255px;
-}
-
-.slideshow-container:hover {
-  animation-play-state: paused;
-}
-
-.slide-img, .text-container {
-  width: 955px;
-  height: auto;
-  display: inline-block;
-  font-size: 16px;
-  text-align: center;
-}
-
-.text-container {
-  height: 225px;
-  position: relative;
-}
-
-
-p {
-  position: relative;
-  top: -45%;
-  padding: 5px;
-}
-
-.slide {
-  animation: slide 9.87s ease infinite; /* vitesse de défilement */
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-
-  12.5% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(-25%);
-  }
-
-  37.5% {
-    transform: translateX(-25%);
-  }
-
-  50% {
-    transform: translateX(-50%);
-  }
-
-  62.5% {
-    transform: translateX(-50%);
-  }
-
-  75% {
-    transform: translateX(-75%);
-  }
-
-  87.5% {
-    transform: translateX(-75%);
-  }
-
-  99% {
-    transform: translateX(-75%);
-  }
-
-  100% {
-    transform: translateX(0);
+/* Media Query pour les petits écrans (smartphones) */
+/* Media Query pour les petits écrans (smartphones) */
+@media screen and (max-width: 768px) {
+  .imgslideur {
+    width: 100%; /* Ajustez la largeur pour les écrans plus petits selon vos besoins */
+    height: auto;
   }
 }
 
-.p {
-  margin-top: 140px;
-  text-align: center;
-}
 /*SLIDE SHOW IMAGE END OF general styles*/

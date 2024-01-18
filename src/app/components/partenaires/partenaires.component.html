@@ -1,11 +1,15 @@
-<body style="background-color: black;">
+<body style="background-color: rgb(8, 8, 8);
+width:100%;
+background: url('assets/images/galaxy.jpg') repeat;
+padding-bottom: 0%;
+">
 
 
 <!--hovering over the images will pause the slideshow -->
-<div style="background-color:#2E2E2E; padding-top: 0.5%;">
-  <div style="width: 775px; height: 200px; text-align:center;margin:0 auto 0 auto; padding:0 auto 0 auto;background-color: black;">
 
-    <ng-image-slider #nav
+<div class="imgslideur" >
+
+  <ng-image-slider #nav
                      [images]="imageObject"
                      [infinite]="true"
                      [autoSlide]="4"
@@ -13,39 +17,30 @@
                      slideImage="1"></ng-image-slider>
   </div>
 
-  <!--
-<section class="slideshow">
-  <div class="slideshow-container slide">
-    <div class="slide-img"><img src="assets/images/img4.jpg"/></div>
-    <div class="slide-img"><img src="assets/images/img7.jpg"/></div>
-    <div class="slide-img"><img src="assets/images/img6.jpg"/></div>
-    <div class="slide-img"><img src="assets/images/img3.jpg"/></div>
-    <div class="slide-img"><img src="assets/images/img2.jpg"/></div>
-  </div>
-</section>
--->
-</div>
+<!--   <div class="imgslideur" >
+
+    <ng-image-slider #nav
+                 [images]="imageObject"
+                 [infinite]="false" 
+                 [autoSlide]="0"   
+                 [imageSize]="{width: '775px', space: 0}"
+                 slideImage="1"></ng-image-slider> 
+</div> -->
 <!--END OF the slideshow -->
 
-
-<script src="assets/web/assets/jquery/jquery.min.js"></script>
-<script src="assets/popper/popper.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/smoothscroll/smooth-scroll.js"></script>
-<script src="assets/dropdown/js/nav-dropdown.js"></script>
-<script src="assets/dropdown/js/navbar-dropdown.js"></script>
-<script src="assets/tether/tether.min.js"></script>
-<script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
-<script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
-<script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
-<script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-<script src="assets/theme/js/script.js"></script>
-<script src="assets/slidervideo/script.js"></script>
-
-
-
-
-
+<section class="partners">
+  <div class="partners-container">
+<h1>PARTENAIRES</h1>
+<p>Ionos</p>
+<p>Malt</p>
+<p>Paypal</p>
+<p>Jhipster</p>
+<p>Liferay</p>
+<p>Developpez.com</p>
+<p>codeur.com</p>
+<p>Madaskill</p>
+</div>
+</section>
 
 
 </body>

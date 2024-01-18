@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgImageSliderModule } from 'ng-image-slider';
+
 
 @Component({
   selector: 'app-accueil',
@@ -17,18 +17,18 @@ export class AccueilComponent implements OnInit {
   imageObject = [{
        // image: 'https://assets/images/software-store-im-defil.gif',
         thumbImage: 'assets/images/dev-im-defil-bis.gif',
-        title: 'SERVICES DE DEVELOPPEMENT',
-       alt:'SERVICES DE DEVELOPPEBoutique E-CMENT'
+        title: 'SERVICES',
+       alt:'SERVICES'
     }, {
        // image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/9.jpg',
         thumbImage: 'assets/images/software-store-im-defil.gif',
         title: 'BOUTIQUE E-COMMERCE',
-        alt:'BOUTIQUE E-COMMERCE'
+        alt:'E-BOUTIQUE'
     }, {
        // image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/1.jpg',
         thumbImage: 'assets/images/it-news-articles-im-defil-955x255.jpg',
-        title: "JOURNAL DE L/''INFORMATIQUE / IT NEWS",
-        alt: "JOURNAL DE L/''INFORMATIQUE / IT NEWS"
+        title: "JOURNAL DE L'INFORMATIQUE / IT NEWS",
+        alt: "JOURNAL DE L'INFORMATIQUE / IT NEWS"
     }, {
        // image: 'https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/2.jpg',
         thumbImage: 'assets/images/partenaires-im-defil-955x255.jpg',
