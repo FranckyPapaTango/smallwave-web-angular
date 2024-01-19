@@ -8,21 +8,8 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #ecf9ff;
-}
-
-body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
-
 .main{
-  max-width: 1200px;
+  max-width: 1500px; /* reglage de la largeur du conteneur de produits */
   margin: 0 auto;
 }
 
@@ -68,18 +55,29 @@ img {
 .cards_item {
   display: flex;
   padding: 1rem;
+ // width: 1500px; /* Ajustez la largeur ici selon vos besoins */
 }
 
 @media (min-width: 40rem) {
   .cards_item {
-    width: 50%;
+    width: 50%; /* Ajustez la largeur ici selon vos besoins */
   }
 }
 
 @media (min-width: 56rem) {
   .cards_item {
-    width: 33.3333%;
+    width: 25%; /* Changez de 33.3333% à 25% pour avoir 4 colonnes sur les écrans plus larges */
   }
+}
+
+/* Ajoutez cette règle CSS pour espacer les filtres */
+.card-top .container.d-flex .item {
+  margin-right: 10px; /* Ajustez la marge selon vos besoins */
+}
+
+/* Ajoutez également cette règle pour éviter une marge à droite sur le dernier élément */
+.card-top .container.d-flex .item:last-child {
+  margin-right: 0;
 }
 
 .card {
@@ -93,7 +91,7 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, #04B4AE 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom left, #5488aa 40%, #f8f6f6 100%);
 }
 
 .card_title {

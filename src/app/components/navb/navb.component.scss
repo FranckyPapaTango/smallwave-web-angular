@@ -1,7 +1,7 @@
 header {
   padding: 18px; /* épaisseur du navbar */
   background-color: #0489B1;
-  z-index: 22222;
+  z-index: 222;
   position: sticky;
   top: 0;
 }
@@ -46,10 +46,25 @@ img {
   top: 20px;
   color: blue;
 }
-
+    /* Nouveaux styles pour le panier en dehors du menu burger */
+/* Ajoutez ces styles pour positionner le panier en dessous du menu burger et en position fixe */
+.btn-cart {
+  position: absolute;
+  top: 114px;
+  right: 0px;
+  z-index: 3222;
+}
 /* responsivité */
 
-@media only screen and (max-width: 999px) {
+@media screen and (max-width: 768px) {
+      /* Nouveaux styles pour le panier en dehors du menu burger */
+/* Ajoutez ces styles pour positionner le panier en dessous du menu burger et en position fixe */
+.btn-cart {
+  position: absolute;
+  top: 114px;
+  margin-right: 0px;
+  z-index: 3222;
+}
   .menu-icon span {
     /* Hamburger appear */
     width: 32px;
@@ -70,7 +85,6 @@ img {
     padding-right: auto;
     cursor: pointer; /* curseur type changmt */
   }
-
   .menu ul li {
     list-style-type: none; /* liste sans point de marque */
     color: white;

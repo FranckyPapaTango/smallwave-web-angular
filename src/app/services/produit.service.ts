@@ -8,7 +8,7 @@ import { Produit } from "../models/produit";
 })
 export class ProduitService {
 
- // url: string = "http://localhost:8082/api/produit";
+//  url: string = "http://localhost:8082/api/produit";
   url: string = "https://rafaros-it.fr/backend-smallwave/api/produit";
 
 constructor(private http: HttpClient ){}

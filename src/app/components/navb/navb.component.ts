@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -16,13 +17,19 @@ export class NavbComponent implements OnInit {
   public totalItem: number = 0;
   public searchTerm!: string;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartService.getProducts()
       .subscribe(res => {
         this.totalItem = res.length;
-      })
+      });
+      // Abonnez-vous aux événements de navigation pour mettre à jour la classe conditionnelle
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isBoutiqueSelected = this.router.url.includes('boutique');
+      }
+    });
   }
 
   search(event: any) {
@@ -36,10 +43,10 @@ export class NavbComponent implements OnInit {
     this.menu_icon_class_BooleanVariable = !this.menu_icon_class_BooleanVariable;
   }
 
-  onBoutiqueSelect() {
+/*   onBoutiqueSelect() {
     // Logique à exécuter lors de la sélection de l'onglet "BOUTIQUE"
     this.isBoutiqueSelected = true;
-  }
+  } */
 
   /* collapse menu after a link is clicked */
   public onSidenavClose = () => {

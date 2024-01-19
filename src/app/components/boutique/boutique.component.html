@@ -6,10 +6,10 @@
 
 
 
-<div style="color: #A4A4A4; font-size: 14px; text-align: center;">
-  CHEF
-  DE PROJET / ARCHITECTE LOGICIEL / CONCEPTEUR-DEVELOPPEUR /
-  ADMINISTRATEUR DE BASE DE DONNEES / WEBMASTER
+<div style="color: #A4A4A4; font-size: 14px; text-align: center;margin-top:12px;">
+  CTO-CIO-CEO / DIRECTEUR DE L'INGENIERIE-RESPONSABLE TECHNIQUE / DIRECTEUR DE PROGRAMME / DIRECTEUR DE PROJET-RESPONSABLE DES OPERATIONS / 
+  CHEF DE DEPARTEMENT / ARCHITECTE LOGICIEL / CHEF DE PROJET / DEVOPS / SCRUM MASTER / PRODUCT OWNER / ANALYSTE FONCTIONNEL / 
+  CONCEPTEUR-DEVELOPPEUR / ANALYSTE DEVELOPPEUR / ADMINISTRATEUR DE BASE DE DONNEES / DEVELOPPEUR WEB / WEBMASTER 
 </div>
 <br>
 <br>
@@ -25,28 +25,36 @@
   <div class="container d-flex">
     <div class="item">
       <a (click)="filter('')">
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+        <img style="height: 55px; margin-top: 5px;" src="./assets/images/photos_produits/categories/allprod.png" alt="">
         <h6>All products</h6>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('electronics')">
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
-        <h6>Electronics</h6>
+      <a (click)="filter('e-book')">
+        <img style="height: 55px; margin-top: 5px;" src="./assets/images/photos_produits/categories/e-books.webp" alt="">
+        <h6>E-Books</h6>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('fashion')">
-        <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
-        <h6>Fashion</h6>
+      <a (click)="filter('logiciel')">
+        <img style="height: 55px; margin-top: 5px;" src="./assets/images/photos_produits/categories/logiciels.png" alt="">
+        <h6>Logiciels</h6>
       </a>
     </div>
     <div class="item">
-      <a (click)="filter('jewelery')">
-        <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
-        <h6>Jewllery</h6>
+      <a (click)="filter('site')">
+        <img style="height: 55px; margin-top: 5px;" src="./assets/images/photos_produits/categories/sites & portails.png" alt="">
+        <h6>Sites/Portails</h6>
       </a>
     </div>
+    <div class="item">
+      <a (click)="filter('jeux')">
+        <!-- <img style="width: 62px; margin-top: 5px;" src="./assets/images/photos_produits/categories/allprod.jpg" alt=""> -->
+        <img style="height: 55px; margin-top: 5px;" src="./assets/images/photos_produits/categories/jeux.png" alt="">
+        <h6>&nbsp;&nbsp;&nbsp;Jeux</h6>
+      </a>
+    </div>
+
   </div>
 </div>
 
@@ -72,14 +80,14 @@
     <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
       <li class="cards_item">
         <div class="card ">
-          <div class="card_image"><img src="{{item.image}}" alt="Mobirise"></div>
+          <div class="card_image"><img src="{{item.image}}" alt="rafaros-IT"></div>
           <div class="card_content">
 
-            <h2 class="card_title">{{item.title}}</h2>
+            <h3 class="card_title">{{item.title}}</h3>
             <br/>
             <p class="card_text">{{item.description}}</p>
             <p><strong>Prix:</strong> {{item.price}}&nbsp;&euro;</p>
-            <button *ngIf="item.isAvailable" class="btn card_btn" (click)=addtocart(item)>Ajouter au Pannier</button>
+            <!-- <button *ngIf="item.isAvailable" class="btn card_btn" (click)=addtocart(item)>Ajouter au Pannier</button> -->
 
           </div>
         </div>

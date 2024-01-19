@@ -15,7 +15,7 @@
           <ul>
 
             <li><a    routerLink="servdev" (click)="onSidenavClose()"><div class="texton">SERVICES</div></a></li>
-            <li><a    routerLink="boutique" (click)="onSidenavClose(); onBoutiqueSelect()"><div class="texton">BOUTIQUE</div></a></li>
+            <li><a    routerLink="boutique" (click)="onSidenavClose()"><div class="texton">BOUTIQUE</div></a></li>
             <li><a    routerLink="journinfo" (click)="onSidenavClose()"><div class="texton">JOURNAL DE LINFORMATIQUE</div></a></li>
             <li><a    routerLink="partenaires" (click)="onSidenavClose()"><div class="texton">PARTENAIRES</div></a></li>
             <li><a    routerLink="about" (click)="onSidenavClose()"><div class="texton">A PROPOS</div></a></li>
@@ -25,22 +25,15 @@
 
 
             <li><button routerLink="auth" class="btn btn-primary" (click)="onSidenavClose()">
-          {{ authStatus ? 'DECONNEXION' : 'CONNEXION' }}
-        </button></li>
-
-<!--         <li><button routerLink="cart" class="btn btn-primary">
-          <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
-          <div style="font-size: 10px;" class="badge bg-danger">{{ totalItem }}</div>
-        </button></li>
- -->
-        <!-- Ajoutez *ngIf pour conditionner l'affichage du panier -->
-<li *ngIf="isBoutiqueSelected"><button routerLink="cart" class="btn btn-primary">
-    <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
-    <div style="font-size: 10px;" class="badge bg-danger">{{ totalItem }}</div>
-  </button></li>
+                {{ authStatus ? 'DECONNEXION' : 'CONNEXION' }}
+               </button>
+            </li>
 
       </ul>
     </div>
+
+            
+
   </div>
 
         <div class="menu-icon" (click)="openMenu()" [class.menu_icon_class]="menu_icon_class_BooleanVariable">
@@ -48,11 +41,13 @@
           <span></span>
           <span></span>
         </div>
-
-      
-
     
 
     </div>
   </div>
+                        <!-- Ajoutez *ngIf pour conditionner l'affichage du panier -->       
+                        <button *ngIf="isBoutiqueSelected" routerLink="cart" class="btn-cart btn btn-primary">
+                          <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+                          <div style="font-size: 10px;" class="badge bg-danger">{{ totalItem }}</div>
+                         </button>
 </header>

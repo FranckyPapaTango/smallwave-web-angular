@@ -9,7 +9,7 @@ import { Typecommande } from "../models/typecommande";
 
 export class TypecommandeService {
 
-  //url: string = "http://localhost:8082/api/typecommande";
+//  url: string = "http://localhost:8082/api/typecommande";
   url: string = "https://rafaros-it.fr/backend-smallwave/api/typecommande";
 constructor(private http: HttpClient ){}
 

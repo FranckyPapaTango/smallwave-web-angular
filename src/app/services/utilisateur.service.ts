@@ -10,7 +10,7 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class UtilisateurService {
 
-  //url: string = "http://localhost:8082/api/utilisateur";
+ // url: string = "http://localhost:8082/api/utilisateur";
   url: string = "https://rafaros-it.fr/backend-smallwave/api/utilisateur";
 constructor(private http: HttpClient ){}
 
